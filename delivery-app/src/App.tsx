@@ -1,7 +1,18 @@
-import { Route, Routes } from 'react-router-dom';
+import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import Form from './components/Form/Form';
 import { Menu } from './pages/Menu/Menu';
 import { Cart } from './pages/Cart/Cart';
+
+const router = createBrowserRouter([
+	{
+		path: '/',
+		element: <Menu />
+	},
+	{
+		path: '/cart',
+		element: <Cart />
+	}
+]);
 
 function App() {
 	return (
@@ -11,10 +22,7 @@ function App() {
 				<a href="/">Меню</a>
 				<a href="/cart">Корзина</a>
 			</div>
-			<Routes>
-				<Route path="/" element={<Menu />} />
-				<Route path="/cart" element={<Cart />} />
-			</Routes>
+			<RouterProvider router={router}></RouterProvider>
 		</>
 	);
 }
