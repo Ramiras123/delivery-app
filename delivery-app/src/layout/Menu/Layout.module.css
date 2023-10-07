@@ -44,7 +44,13 @@
 	font-style: normal;
 	font-weight: 400;
 }
+.active {
+	color: var(--primory-color);
+}
 
+.link:hover {
+	color: var(--primory-color);
+}
 .exit {
 	margin-top: auto;
 	display: flex;
