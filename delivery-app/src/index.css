@@ -1,3 +1,14 @@
 :root {
+	--primory-color: #fe724c;
+	--primory-hover-color: #df6442;
+	--white-color: #ffffff;
+	--text-color: #000;
+	--text-secondary-color: #5b5b5e;
+	--separator-color: #d4d6e0;
 
+	--border-28: 28.5px;
+}
+
+body {
+	font-family: 'Open Sans', sans-serif;
 }

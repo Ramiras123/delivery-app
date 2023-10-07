@@ -1,15 +1,25 @@
 .button {
-	border-radius: var(--border-6);
+	border-radius: var(--border-28);
 	border: none;
-	padding: 8px 30px;
-	font-size: 16px;
 	cursor: pointer;
 	transition: background 0.25s;
-	color: var(--white);
+	color: var(--white-color);
+	font-style: normal;
+	font-weight: 400;
 }
 .button:hover {
-	background: var(--color-premium-btn-hover);
+	background: var(--primory-hover-color);
 }
 .accent {
-	background: var(--color-premium-btn);
+	background: var(--primory-color);
+}
+.small {
+	font-size: 16px;
+	padding: 10px 25px;
+}
+
+.big {
+	font-size: 15px;
+	text-transform: capitalize;
+	padding: 20px 60px;
 }

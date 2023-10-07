@@ -1,16 +1,11 @@
-import { MouseEvent, useState } from 'react';
-import Button from './components/Button/Button';
+
+import Form from './components/Form/Form';
 
 function App() {
-	const [counter, setCounter] = useState<number>();
-
-	const addCounter = (e: MouseEvent) => {
-		console.log(e);
-	};
 
 	return (
 		<>
-			<Button onClick={addCounter}>Сохранить</Button>
+			<Form></Form>
 		</>
 	);
 }
