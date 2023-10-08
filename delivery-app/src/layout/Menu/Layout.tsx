@@ -9,7 +9,7 @@ export function Layout() {
 			<div className={styles['sidebar']}>
 				<div className={styles['user']}>
 					<img
-						src="avatar.png"
+						src="/avatar.png"
 						className={styles['avatar']}
 						alt="аватар пользователя"
 					/>
