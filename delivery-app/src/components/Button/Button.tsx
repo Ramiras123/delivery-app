@@ -1,6 +1,6 @@
 import styles from './Button.module.css';
 import cn from 'classnames';
-import { ButtonProps } from './Button.types';
+import { ButtonProps } from './Button.props';
 function Button({
 	children,
 	className,
