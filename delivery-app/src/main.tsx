@@ -1,7 +1,7 @@
 import React, { Suspense, lazy } from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import { RouterProvider, createBrowserRouter } from 'react-router-dom';
+import { RouterProvider, createBrowserRouter, defer } from 'react-router-dom';
 import { Layout } from './layout/Menu/Layout.tsx';
 import axios from 'axios';
 import { PREFIX } from './helpers/API.ts';
@@ -33,15 +33,17 @@ const router = createBrowserRouter([
 			},
 			{
 				path: '/product/:id',
-				element: (
-					<Suspense fallback={<>Загрузка...</>}>
-						<Product />
-					</Suspense>
-				),
+				element: <Product />,
 				errorElement: <>Ошибка</>,
 				loader: async ({ params }) => {
-					const { data } = await axios.get(`${PREFIX}/products/${params.id}`);
-					return data;
+					return defer({
+						data: axios
+							.get(`${PREFIX}/products/${params.id}`)
+							.then((data) => data)
+							.catch((error) => console.error(error))
+					});
+					// const { data } = await axios.get(`${PREFIX}/products/${params.id}`);
+					// return data;
 				}
 			}
 		]
