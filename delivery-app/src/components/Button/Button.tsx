@@ -4,14 +4,14 @@ import { ButtonProps } from './Button.props';
 function Button({
 	children,
 	className,
-	appearence = 'small',
+	appearance: appearance = 'small',
 	...props
 }: ButtonProps) {
 	return (
 		<button
 			className={cn(styles.button, styles.accent, className, {
-				[styles['small']]: appearence == 'small',
-				[styles['big']]: appearence === 'big'
+				[styles['small']]: appearance == 'small',
+				[styles['big']]: appearance === 'big'
 			})}
 			{...props}
 		>

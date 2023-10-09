@@ -7,14 +7,14 @@ import styles from './Menu.module.css';
 import axios, { AxiosError } from 'axios';
 import { MenuList } from './MenuList/MenuList';
 
-export function Menu(): JSX.Element {
+function Menu(): JSX.Element {
 	const [products, setProducts] = useState<Product[]>([]);
-	const [isLoading, setiIsLoading] = useState<boolean>(false);
+	const [isLoading, setIsLoading] = useState<boolean>(false);
 	const [error, setError] = useState<string | undefined>();
 
 	const getMenu = async () => {
 		try {
-			setiIsLoading(true);
+			setIsLoading(true);
 			await new Promise<void>((resolve) =>
 				setTimeout(() => {
 					resolve();
@@ -22,13 +22,13 @@ export function Menu(): JSX.Element {
 			);
 			const { data } = await axios.get<Product[]>(`${PREFIX}/products`);
 			setProducts(data);
-			setiIsLoading(false);
+			setIsLoading(false);
 		} catch (err) {
 			console.error(err);
 			if (err instanceof AxiosError) {
 				setError(err.message);
 			}
-			setiIsLoading(false);
+			setIsLoading(false);
 			return;
 		}
 	};
@@ -50,3 +50,5 @@ export function Menu(): JSX.Element {
 		</>
 	);
 }
+
+export default Menu;

@@ -1,4 +1,3 @@
-import cn from 'classnames';
 import Button from '../Button/Button';
 import Input from '../Input/Input';
 function Form() {
@@ -8,7 +7,7 @@ function Form() {
 			<Input type="email" id="email" placeholder="Email"></Input>
 			<label htmlFor="password">Ваш Пароль</label>
 			<Input type="password" id="password" placeholder="Пароль"></Input>
-			<Button appearence="big">Вход</Button>
+			<Button appearance="big">Вход</Button>
 		</form>
 	);
 }
