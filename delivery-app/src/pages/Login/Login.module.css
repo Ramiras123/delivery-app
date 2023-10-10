@@ -39,3 +39,10 @@
 	color: var(--primory-color);
 	text-decoration: none;
 }
+
+.error { 
+	background: #FFC529;
+	color: var(--white-color);
+	padding: 20px;
+
+}
