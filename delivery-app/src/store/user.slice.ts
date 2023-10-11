@@ -47,7 +47,7 @@ export const userSlice = createSlice({
 			}
 		);
 		builder.addCase(login.rejected, (state, error) => {
-			console.log(action);
+			console.log(error);
 		});
 	}
 });
