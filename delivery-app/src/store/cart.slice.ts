@@ -1,5 +1,4 @@
 import { PayloadAction, createSlice } from '@reduxjs/toolkit';
-import { act } from 'react-dom/test-utils';
 
 export interface CartItem {
 	id: number;
