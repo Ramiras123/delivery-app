@@ -12,6 +12,7 @@ import { RequireAuth } from './helpers/RequireAuth.tsx';
 import { Provider } from 'react-redux';
 import { store } from './store/store.ts';
 import Product from './pages/Product/Product.tsx';
+import Success from './pages/Success/Success.tsx';
 
 const Menu = lazy(() => import('./pages/Menu/Menu'));
 const Cart = lazy(() => import('./pages/Cart/Cart'));
@@ -33,6 +34,10 @@ const router = createBrowserRouter([
 						<Menu />
 					</Suspense>
 				)
+			},
+			{
+				path: '/success',
+				element: <Success />
 			},
 			{
 				path: '/cart',
