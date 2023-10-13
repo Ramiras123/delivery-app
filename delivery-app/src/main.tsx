@@ -11,10 +11,11 @@ import { Register } from './pages/Register/Register.tsx';
 import { RequireAuth } from './helpers/RequireAuth.tsx';
 import { Provider } from 'react-redux';
 import { store } from './store/store.ts';
+import Product from './pages/Product/Product.tsx';
 
 const Menu = lazy(() => import('./pages/Menu/Menu'));
 const Cart = lazy(() => import('./pages/Cart/Cart'));
-const Product = lazy(() => import('./pages/Product/Product'));
+//const Product = lazy(() => import('./pages/Product/Product'));
 
 const router = createBrowserRouter([
 	{
